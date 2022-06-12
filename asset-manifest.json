@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Movie_Web.git/static/css/main.edf57991.css",
+    "main.js": "/Movie_Web.git/static/js/main.22171ce4.js",
+    "index.html": "/Movie_Web.git/index.html",
+    "main.edf57991.css.map": "/Movie_Web.git/static/css/main.edf57991.css.map",
+    "main.22171ce4.js.map": "/Movie_Web.git/static/js/main.22171ce4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.edf57991.css",
+    "static/js/main.22171ce4.js"
+  ]
+}
