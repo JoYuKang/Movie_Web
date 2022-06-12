@@ -25,7 +25,7 @@ function Home(){
     //   setMovies(json.data.movies);
     //   setLoding(false);
   }, []);
-  console.log(movies);
+  //console.log(movies);
   return (
     <div>
       {loaing ? (
@@ -35,6 +35,7 @@ function Home(){
           {movies.map((movie) => (
             <Movie
               key={movie.id}
+              id = {movie.id}
               coverImage={movie.medium_cover_image}
               title={movie.title}
               summary={movie.summary}
