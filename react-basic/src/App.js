@@ -6,11 +6,12 @@ function App() {
   return (
   <Router>
     <Switch>
+      
       <Route path="/movie/:id">
         <Detail></Detail>
       </Route>
-      <Route path="/">
-        <Home />
+      <Route >     
+       <Home></Home>
       </Route>
     </Switch>
   </Router>

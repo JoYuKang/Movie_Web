@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Movie from "../components/Movie";
+import styles from "../css/HomeModule.css";
 
 function Home(){
 
@@ -27,11 +28,13 @@ function Home(){
   }, []);
   //console.log(movies);
   return (
+    
     <div>
+      <section className={styles.container}>
       {loaing ? (
         <h1>loaing...</h1>
       ) : (
-        <div>
+        <div className={styles.movies}>
           {movies.map((movie) => (
             <Movie
               key={movie.id}
@@ -44,6 +47,7 @@ function Home(){
           ))}
         </div>
       )}
+      </section>
     </div>
   );
 }
