@@ -11,16 +11,13 @@ function Detail(){
     const json = await( 
       await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
     ).json();
-      //console.log(json.data.movie.id);
       setMovies(json.data.movie);
       setLoding(false);
   }
   useEffect(() => {
    getMovie();
   }, [])
-  console.log(m);
-  console.log(m.id);
-  console.log(m.title);
+  
   return(
     <div>
       {loaing ? (
@@ -30,7 +27,7 @@ function Detail(){
             <MovieDetail
               key={m.id}
               id = {m.id}
-              coverImage={m.medium_cover_image}
+              coverImage={m.large_cover_image}
               title={m.title}
               description_intro={m.description_intro}
               genres={m.genres}

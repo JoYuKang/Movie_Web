@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Movie from "../components/Movie";
-import styles from "../css/HomeModule.css";
+import styles from "../css/Home.module.css";
 
 function Home(){
 
@@ -26,7 +26,9 @@ function Home(){
     //   setMovies(json.data.movies);
     //   setLoding(false);
   }, []);
-  //console.log(movies);
+  console.log(movies);
+
+  
   return (
     
     <div>
@@ -39,6 +41,7 @@ function Home(){
             <Movie
               key={movie.id}
               id = {movie.id}
+              year={movie.year}
               coverImage={movie.medium_cover_image}
               title={movie.title}
               summary={movie.summary}
