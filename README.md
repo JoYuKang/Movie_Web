@@ -10,6 +10,9 @@ $ npm i @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons @f
 
 // 리액트 컴포넌트 형태로 사용할 수 있게 변경
 $ npm i @fortawesome/react-fontawesome
+
+npm i --save @fortawesome/free-brands-svg-icons
+
 ```
 import 방법
 ```
