@@ -6,13 +6,12 @@ import Header from "./rayout/Header";
 function App() {
   return (
   <Router>
+    <Header></Header>  
     <Switch>
       <Route path="/movie/:id">
-      <Header></Header>  
         <Detail></Detail>
       </Route>
       <Route>   
-       <Header></Header>  
        <Home></Home>
       </Route>
     </Switch>
