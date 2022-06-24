@@ -1,22 +1,27 @@
 import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import { faCubes } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faCubes } from "@fortawesome/free-solid-svg-icons";
 
-import { faAngellist, faTwitter, faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter, faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import styles from "../css/Header.module.css";
 import Home from "../routes/Home";
 
 function Header() {
-  const[icon,setIcon] = useState("");
-  useEffect(() =>{
-    setIcon("fa-thin fa-clapperboard-play")
-  },[])
+  const[icon,showIcon] = useState(false);
+  
+  const changeIcon = () => {
+    showIcon(!icon);
+  }
 
+  useEffect(() =>{
+    console.log("확인 >> " + icon);
+  },[icon])
+  
 
   return (
-    <div>
+    <>
       <nav className={styles.container}>
         <div className={styles.navbar_logo}>
         
@@ -26,16 +31,17 @@ function Header() {
         </div>
         <ul className={styles.navbar_menu}>
           <li>Movie List</li>
-          <li></li>
           <li>contact me!</li>
         </ul>
         <ul className={styles.navbar_icons}>
           <li><FontAwesomeIcon icon={faTwitter} /></li>
           <li><FontAwesomeIcon icon={faFacebook} /></li>
           <li><FontAwesomeIcon icon={faGithub} /></li>
+          
         </ul>
+        <Link to="#" className={styles.bars} onClick={changeIcon}><FontAwesomeIcon icon={faBars}/></Link>
       </nav>
-    </div>
+    </>
   );
 }
 

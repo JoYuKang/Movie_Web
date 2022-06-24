@@ -1,7 +1,7 @@
 
 body{
   margin: 0;
-  
+  font-family: 'Source Sans Pro';
 }
 .container{
     background-color: #263343;
@@ -51,7 +51,7 @@ a{
 .container .navbar_menu li:hover{
   border-radius: 4px;
   background-color: coral;
-  transform: scale(1.3);
+  transform: scale(1.1);
 }
 
 .container .navbar_icons{
@@ -69,4 +69,47 @@ a{
 
 .container .navbar_icons li:hover{
   transform: scale(1.3);
+}
+
+.container .bars{
+  display: none;
+  position: absolute;
+  right: 32px;
+  top: 30px;
+  font-size:  24px;
+  color: darkgrey;
+  transition: all .4s;
+}
+.container .bars:hover{
+  color:coral ;
+}
+
+@media screen and (max-width: 768px) {
+  .container{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .container .navbar_menu{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 8px 50px;
+  }
+
+  .container .navbar_menu li{
+    width: 100%;
+    text-align: center;
+    transform: scale(1.0)
+  }
+
+  .container .navbar_icons{
+    display: none;
+  justify-content: center;
+  width: 100%;
+  }
+
+  .container .bars{
+    display: block;
+  }
 }
