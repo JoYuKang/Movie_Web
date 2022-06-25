@@ -80,6 +80,15 @@ a{
   color: darkgrey;
   transition: all .4s;
 }
+.container .bars.bars.active{
+  display: none;
+  position: absolute;
+  right: 32px;
+  top: 30px;
+  font-size:  24px;
+  color: darkgrey;
+  transition: all .4s;
+}
 .container .bars:hover{
   color:coral ;
 }
@@ -105,11 +114,21 @@ a{
 
   .container .navbar_icons{
     display: none;
-  justify-content: center;
-  width: 100%;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .container .navbar_menu.active,
+  .container .navbar_icons.active{
+    display: flex;
+    
   }
 
   .container .bars{
     display: block;
+  }
+  .container .bars.active{
+    display: block;
+    color: coral;
   }
 }

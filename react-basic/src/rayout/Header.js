@@ -9,7 +9,7 @@ import styles from "../css/Header.module.css";
 import Home from "../routes/Home";
 
 function Header() {
-  const[icon,showIcon] = useState(false);
+  const[icon,showIcon] = useState(true);
   
   const changeIcon = () => {
     showIcon(!icon);
@@ -17,6 +17,9 @@ function Header() {
 
   useEffect(() =>{
     console.log("확인 >> " + icon);
+    if(icon){
+      
+    }
   },[icon])
   
 
@@ -29,17 +32,17 @@ function Header() {
         
         <FontAwesomeIcon icon="fa-brands fa-twitter" size="3x" />
         </div>
-        <ul className={styles.navbar_menu}>
+        <ul className={icon ? styles.navbar_menu : styles.navbar_menu.active}>
           <li>Movie List</li>
           <li>contact me!</li>
         </ul>
-        <ul className={styles.navbar_icons}>
+        <ul className={icon ? styles.navbar_icons : styles.navbar_menu.active}>
           <li><FontAwesomeIcon icon={faTwitter} /></li>
           <li><FontAwesomeIcon icon={faFacebook} /></li>
           <li><FontAwesomeIcon icon={faGithub} /></li>
           
         </ul>
-        <Link to="#" className={styles.bars} onClick={changeIcon}><FontAwesomeIcon icon={faBars}/></Link>
+        <Link to="#" className={icon? styles.bars: styles.bars.active} onClick={changeIcon}><FontAwesomeIcon icon={faBars}/></Link>
       </nav>
     </>
   );
